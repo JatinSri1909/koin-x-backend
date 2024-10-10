@@ -1,15 +1,12 @@
 const express = require("express");
 
-const Crypto = require("../models/cryptoModel");
+const getStats = require("../controllers/stats");
+const getDeviation = require("../controllers/deviation");
 
 const CryptoRouter = express.Router();
 
-CryptoRouter.get("/stats", (req, res) => {
-  res.send("API for stats is working");
-});
+CryptoRouter.get("/stats", getStats);
 
-CryptoRouter.get("/deviation", (req, res) => {
-  res.send("API for deviation is working");
-});
+CryptoRouter.get("/deviations", getDeviation);
 
 module.exports = CryptoRouter;
