@@ -7,6 +7,6 @@ const CryptoRouter = express.Router();
 
 CryptoRouter.get("/stats", getStats);
 
-CryptoRouter.get("/deviations", getDeviation);
+CryptoRouter.get("/deviation", getDeviation);
 
 module.exports = CryptoRouter;
