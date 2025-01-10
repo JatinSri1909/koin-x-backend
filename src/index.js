@@ -17,7 +17,7 @@ connectDB();
 fetchCrytoData();
 
 // Routes
-app.use("/api", cryptoRoutes);
+app.use("/", cryptoRoutes);
 
 
 app.listen(port, () => {
